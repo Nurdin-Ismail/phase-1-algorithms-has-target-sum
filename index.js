@@ -1,6 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let h = i + 1; h < array.length; h++) {
+      if (array[i] + array[h] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
+console.log(hasTargetSum([30,21,72,65,1,4,3,7,40], 70))
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,10 +18,15 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  for every item in the list
+  if 
 */
 
 /*
   Add written explanation of your solution here
+  an array and a target number is given
+  the algorithm is supoosed to return true if there exists a pair of numbers that add up to the target
+
 */
 
 // You can run `node index.js` to view these console logs
